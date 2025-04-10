@@ -8,7 +8,7 @@ const greenbutton = ({ children }) => {
     router.push("/register");
   };
   return (
-    <button onClick={handleclick} className="bg-[#58CC02] uppercase focus:border-none p-2.5 text-white font-extrabold border-b-4 cursor-pointer  border-[#58A700] px-16 rounded-xl">
+    <button onClick={handleclick} className="bg-[#58CC02] uppercase active:border-none p-2.5 text-white font-extrabold border-b-4 cursor-pointer  border-[#58A700] px-16 rounded-xl">
       {children}
     </button>
   );
