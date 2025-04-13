@@ -2,7 +2,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 
-const greenbutton = ({ children }) => {
+const Greenbutton = ({ children }) => {
   const router = useRouter();
   const handleclick = () => {
     router.push("/register");
@@ -14,4 +14,4 @@ const greenbutton = ({ children }) => {
   );
 };
 
-export default greenbutton;
+export default Greenbutton;

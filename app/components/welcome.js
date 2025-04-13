@@ -4,8 +4,9 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Greenbutton from "./greenbutton";
+import Image from "next/image";
 
-const welcome = () => {
+const Welcome = () => {
   const [progress, setprogress] = useState(0);
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -74,7 +75,7 @@ const welcome = () => {
     } else {
       localStorage.setItem("answers", JSON.stringify(answers));
       setprogress(100);
-      router.push("/login");
+      router.push("/login-signup");
     }
     setactiveindex(-1);
   };
@@ -155,10 +156,11 @@ const welcome = () => {
                         : "text-[#4B4B4B] border-b-4 border-[#E5E5E5] bg-white"
                     } active:border-b-2   hover:brightness-95 cursor-pointer rounded-xl flex items-center justify-start`}
                   >
-                    <img
+                    <Image
+                      width={40}
+                      height={40}
                       src="https://placehold.co/40x40"
                       alt="testing"
-                      className=""
                     />
                     <p className="text-center  font-extrabold">{option}</p>
                   </div>
@@ -182,4 +184,4 @@ const welcome = () => {
   );
 };
 
-export default welcome;
+export default Welcome;

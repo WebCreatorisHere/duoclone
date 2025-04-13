@@ -28,6 +28,7 @@ const Registermain = () => {
     </nav>
 
     <section className='w-full h-[calc(100vh-66px)] py-18 flex  items-center flex-col'>
+      
 
     <p className='font-extrabold text-3xl text-center w-[80%] text-[#4B4B4B]'>I want to learn...</p>    
     <div className="drawer flex gap-5 mt-16 flex-wrap w-full px-[10%] mx-auto justify-center ">

@@ -1,5 +1,6 @@
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import Sessionwrapper from "./components/Sessionwrapper";
 
 const nunitoroi = Nunito({
   variable: "--font-nunito",
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${nunitoroi.variable} antialiased`}
       >
+        <Sessionwrapper>
         {children}
+        </Sessionwrapper>
       </body>
     </html>
   );
