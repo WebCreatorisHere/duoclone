@@ -15,3 +15,7 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+p,h1,h2,h3,h4,h5,h6 ,img,svg,button,a {
+  -webkit-user-drag: none;
+  user-select: none;
+}

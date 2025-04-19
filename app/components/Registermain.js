@@ -23,7 +23,7 @@ const Registermain = () => {
     }
   return (
     <main className='w-full h-screen pt-16'>
-        <nav className='flex fixed z-100 top-0 left-0 w-full justify-start items-center p-3 px-[10%] bg-white shadow-md'>
+        <nav className='flex fixed max-[950px]:justify-center z-100 top-0 left-0 w-full justify-start items-center p-3 px-[10%] bg-white shadow-md'>
         <div className="logo"><img src="svgs/logo.svg" alt="Duolingo" /></div>
     </nav>
 
@@ -31,9 +31,9 @@ const Registermain = () => {
       
 
     <p className='font-extrabold text-3xl text-center w-[80%] text-[#4B4B4B]'>I want to learn...</p>    
-    <div className="drawer flex gap-5 mt-16 flex-wrap w-full px-[10%] mx-auto justify-center ">
+    <div className="drawer flex gap-5 mt-16 flex-wrap w-full px-[10%] max-[700px]:px-[4%] mx-auto justify-center ">
        {languages && languages.map((language,index)=>{
-        return <div onClick={()=>handlelanguage(language)} key={index} className=' w-[200px] h-[217px] gap-2.5 border-2 active:bg-[#DDF4FF] active:border-[#84D8FF] active:border-b-2  border-b-4 hover:brightness-90 cursor-pointer border-[#E5E5E5] rounded-xl flex flex-col items-center justify-center bg-white'>
+        return <div onClick={()=>handlelanguage(language)} key={index} className=' w-[200px] max-[460px]:max-w-[calc(52%_-_20px)] h-[217px] gap-2.5 border-2 active:bg-[#DDF4FF] active:border-[#84D8FF] active:border-b-2  border-b-4 hover:brightness-90 cursor-pointer border-[#E5E5E5] rounded-xl flex flex-col items-center justify-center bg-white'>
         <img src={`svgs/${language.country}.svg`} alt={`${language.country}`} className='w-20' />
         <h1 className='text-[#4b4b4b] text-lg font-extrabold mt-4 -mb-2'>{language.title}</h1>
         <p className='text-[#777777] font-semibold'>{language.para}</p>

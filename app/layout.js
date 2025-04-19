@@ -1,6 +1,7 @@
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import Sessionwrapper from "./components/Sessionwrapper";
+import 'izitoast/dist/css/iziToast.min.css';
 
 const nunitoroi = Nunito({
   variable: "--font-nunito",

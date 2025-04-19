@@ -87,8 +87,8 @@ const Welcome = () => {
 
   return (
     <main>
-      <header className="flex flex-col justify-center w-full px-[6.25%] pb-6  items-center">
-        <nav className="flex justify-center w-full gap-4 p-10.5  items-center">
+      <header className="flex flex-col justify-center w-full px-[6.25%] pb-6 max-[1050px]:px-[1%] items-center">
+        <nav className="flex justify-center w-full gap-4 p-10.5 max-[1050px]:px-3 items-center">
           <button onClick={()=>router.back()} className=" backward cursor-pointer flex justify-center items-center">
             <img className="w-4.5" src="svgs/back.svg" alt="🔙" />
           </button>
@@ -101,7 +101,7 @@ const Welcome = () => {
           </div>
         </nav>
 
-        <div className="questioning flex justify-start items-center w-full gap-6 px-20 -mt-2">
+        <div className="questioning flex justify-start items-center w-full gap-6 px-20 max-[1050px]:px-8 max-[400px]:px-4 -mt-2">
           <div className="teacher flex justify-center items-center">
             <img className="w-24" src="images/duo.png" alt="Q." />
           </div>
@@ -128,7 +128,7 @@ const Welcome = () => {
           </div>
         </div>
       </header>
-      <section className="h-[43vh] relative w-[68%] mx-auto overflow-hidden">
+      <section className="h-[43vh] max-[650px]:h-[55vh] relative w-[68%] mx-auto max-[1050px]:w-full overflow-hidden">
         {questions.map((questionbox, mainindex) => {
           let activated = false;
           if (questionbox.keyword == currparam) activated = true;
@@ -140,7 +140,7 @@ const Welcome = () => {
                 activated
                   ? "opacity-100 translate-x-0"
                   : "opacity-0 translate-x-full"
-              } transition-all duration-500 justify-center overflow-y-scroll max-h-full scrollbar-hide items-center absolute top-0 left-0 w-full flex-wrap gap-4 mx-auto pb-6`}
+              } transition-all duration-500 justify-center max-[650px]:justify-start max-[650px]:flex-col max-[650px]:flex-nowrap  max-[1050px]:px-8 max-[400px]:px-4 overflow-y-scroll max-h-full scrollbar-hide items-center absolute top-0 left-0 w-full flex-wrap gap-4 mx-auto pb-6`}
             >
               {questionbox.options.map((option, index) => {
                 return (
@@ -150,7 +150,7 @@ const Welcome = () => {
                       setactiveindex(index);
                     }}
                     key={index}
-                    className={`active:text-[#1899D6] w-[calc(50%-16px)] py-3.5 px-4 gap-4 border-2 active:bg-[#DDF4FF] active:border-[#84D8FF] ${
+                    className={`active:text-[#1899D6] active:border-b-2 active:mt-0.5 max-[650px]:w-full w-[calc(50%-16px)] py-3.5 px-4 gap-4 border-2 active:bg-[#DDF4FF] active:border-[#84D8FF] ${
                       activeindex == index
                         ? "bg-[#DDF4FF] border-[#84D8FF] border-b-4 text-[#1899D6]"
                         : "text-[#4B4B4B] border-b-4 border-[#E5E5E5] bg-white"

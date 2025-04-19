@@ -3,7 +3,7 @@ import React from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession , signOut} from 'next-auth/react'
 
-const page = () => {
+const Page = () => {
     const {data:session} = useSession()
     const router = useRouter()
     
@@ -27,4 +27,4 @@ const page = () => {
     }
 }
 
-export default page
+export default Page
