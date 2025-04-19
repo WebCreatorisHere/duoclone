@@ -88,9 +88,6 @@ export const authOptions = NextAuth({
           password,
           isVerified: true,
         });
-        if (!userea) {
-          throw new Error("Invalid email or user not verified");
-        }
         return true;
       }
 

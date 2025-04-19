@@ -19,7 +19,7 @@ const CreateAccount = ()=>{
     }, [session,status,router])
     
     const OnhandleSubmit = async(data) => {
-      if(data.password !== data.confirmedpassword){
+      if(data.password == data.confirmedpassword){
       let a = await fetch("/api/create",{
         method:"POST",
         headers:{
